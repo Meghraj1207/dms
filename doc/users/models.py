@@ -22,10 +22,11 @@ class CustomUserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     ROLE_CHOICES = [
-        ('initiator', 'Initiator'),
-        ('reviewer', 'Reviewer'),
-        ('approver', 'Approver'),
-        ('admin', 'Admin'),
+    ('admin', 'Admin'),
+    ('initiator', 'Initiator'),
+    ('reviewer', 'Reviewer'),
+    ('approver', 'Approver'),
+    ('viewer', 'Viewer'),
     ]
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

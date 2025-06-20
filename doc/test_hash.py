@@ -1,6 +1,6 @@
 from documents.models import Document
 from utils.hashid import encode_id
-doc = Document.objects.all().order_by('id')[3] 
+doc = Document.objects.all().order_by('id')[4] 
 
 hashid = encode_id(doc.id)
 
